@@ -36,6 +36,11 @@ jobs:
             allowed=1
           fi
 
+          # 3) feature/* -> feature/* 허용
+          if [[ "$HEAD" == feature/* && "$BASE" == feature/* ]]; then
+            allowed=1
+          fi
+
           if [[ $allowed -eq 1 ]]; then
             echo "✅ Allowed by policy."
             exit 0
