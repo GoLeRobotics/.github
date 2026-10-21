@@ -1,0 +1,21 @@
+name: Task
+description: 구현, 문서, 정리 등 계획된 작업을 기록합니다.
+title: "[Task] "
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: 작업 목적
+      description: 왜 이 작업이 필요한가요?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: 작업 내용
+      description: 수행할 내용을 적어주세요.
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
